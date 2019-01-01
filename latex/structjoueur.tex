@@ -1,0 +1,182 @@
+\hypertarget{structjoueur}{}\section{Référence de la structure joueur}
+\label{structjoueur}\index{joueur@{joueur}}
+
+
+Structure qui représente un joueur.  
+
+
+
+
+{\ttfamily \#include $<$header.\+h$>$}
+
+
+
+Graphe de collaboration de joueur\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{structjoueur__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}} \mbox{[}\mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{T\+A\+I\+L\+L\+E\+\_\+\+P\+L\+A\+T\+E\+AU}}\mbox{]}\mbox{[}\mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{T\+A\+I\+L\+L\+E\+\_\+\+P\+L\+A\+T\+E\+AU}}\mbox{]}
+\item 
+char $\ast$ \mbox{\hyperlink{structjoueur_a5228c842828b2639253cb7db01e6f72d}{nom}}
+\item 
+char $\ast$ \mbox{\hyperlink{structjoueur_a1064ba94d4d2719446f3c609135ba362}{color}}
+\item 
+int \mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}}
+\item 
+\mbox{\hyperlink{structbateau}{bateau}} \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}} \mbox{[}10\mbox{]}
+\item 
+char \mbox{\hyperlink{structjoueur_ab0c0fa544d83148d4daed41c84954e55}{nbr\+\_\+bateau\+\_\+couler}}
+\item 
+char \mbox{\hyperlink{structjoueur_a4f902c486f8d66cb85cf3b07abd0bd12}{nbr\+\_\+bateau\+\_\+restant}}
+\item 
+char \mbox{\hyperlink{structjoueur_a19510a02b4ff3f6336da487b50806d71}{nbr\+\_\+tir\+\_\+reussit}}
+\item 
+int \mbox{\hyperlink{structjoueur_aaba095a23d03a15d363924e77caa3c1e}{nbr\+\_\+tir\+\_\+manquer}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Structure qui représente un joueur. 
+
+Définition à la ligne 40 du fichier header.\+h.
+
+
+
+\subsection{Documentation des champs}
+\mbox{\Hypertarget{structjoueur_a3b21aa14ce27f69126dc9a649b363146}\label{structjoueur_a3b21aa14ce27f69126dc9a649b363146}} 
+\index{joueur@{joueur}!bat@{bat}}
+\index{bat@{bat}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{bat}{bat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbateau}{bateau}} joueur\+::bat\mbox{[}10\mbox{]}}
+
+Tableau de bateau 
+
+Définition à la ligne 45 du fichier header.\+h.
+
+
+
+Référencé par compar(), positionement\+Des\+Bateaux(), table\+Board(), et tour().
+
+\mbox{\Hypertarget{structjoueur_a1064ba94d4d2719446f3c609135ba362}\label{structjoueur_a1064ba94d4d2719446f3c609135ba362}} 
+\index{joueur@{joueur}!color@{color}}
+\index{color@{color}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily char$\ast$ joueur\+::color}
+
+Variable indiquant la color du joueur 
+
+Définition à la ligne 43 du fichier header.\+h.
+
+
+
+Référencé par afficher(), initialisation(), et print().
+
+\mbox{\Hypertarget{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}\label{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}} 
+\index{joueur@{joueur}!ia@{ia}}
+\index{ia@{ia}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{ia}{ia}}
+{\footnotesize\ttfamily int joueur\+::ia}
+
+Variable indiquant la nature de joueur IA ou humain 
+
+Définition à la ligne 44 du fichier header.\+h.
+
+
+
+Référencé par initialisation(), jeu(), jeu\+A\+N\+Coup(), et tour().
+
+\mbox{\Hypertarget{structjoueur_ab0c0fa544d83148d4daed41c84954e55}\label{structjoueur_ab0c0fa544d83148d4daed41c84954e55}} 
+\index{joueur@{joueur}!nbr\+\_\+bateau\+\_\+couler@{nbr\+\_\+bateau\+\_\+couler}}
+\index{nbr\+\_\+bateau\+\_\+couler@{nbr\+\_\+bateau\+\_\+couler}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{nbr\+\_\+bateau\+\_\+couler}{nbr\_bateau\_couler}}
+{\footnotesize\ttfamily char joueur\+::nbr\+\_\+bateau\+\_\+couler}
+
+Variable indiquant le nombre bateau couler 
+
+Définition à la ligne 47 du fichier header.\+h.
+
+
+
+Référencé par initialisation(), et table\+Board().
+
+\mbox{\Hypertarget{structjoueur_a4f902c486f8d66cb85cf3b07abd0bd12}\label{structjoueur_a4f902c486f8d66cb85cf3b07abd0bd12}} 
+\index{joueur@{joueur}!nbr\+\_\+bateau\+\_\+restant@{nbr\+\_\+bateau\+\_\+restant}}
+\index{nbr\+\_\+bateau\+\_\+restant@{nbr\+\_\+bateau\+\_\+restant}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{nbr\+\_\+bateau\+\_\+restant}{nbr\_bateau\_restant}}
+{\footnotesize\ttfamily char joueur\+::nbr\+\_\+bateau\+\_\+restant}
+
+Variable indiquant le nombre bateau restant 
+
+Définition à la ligne 48 du fichier header.\+h.
+
+
+
+Référencé par initialisation(), et table\+Board().
+
+\mbox{\Hypertarget{structjoueur_aaba095a23d03a15d363924e77caa3c1e}\label{structjoueur_aaba095a23d03a15d363924e77caa3c1e}} 
+\index{joueur@{joueur}!nbr\+\_\+tir\+\_\+manquer@{nbr\+\_\+tir\+\_\+manquer}}
+\index{nbr\+\_\+tir\+\_\+manquer@{nbr\+\_\+tir\+\_\+manquer}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{nbr\+\_\+tir\+\_\+manquer}{nbr\_tir\_manquer}}
+{\footnotesize\ttfamily int joueur\+::nbr\+\_\+tir\+\_\+manquer}
+
+Variable indiquant le nombre de tirs manqués 
+
+Définition à la ligne 50 du fichier header.\+h.
+
+
+
+Référencé par initialisation(), table\+Board(), et tour().
+
+\mbox{\Hypertarget{structjoueur_a19510a02b4ff3f6336da487b50806d71}\label{structjoueur_a19510a02b4ff3f6336da487b50806d71}} 
+\index{joueur@{joueur}!nbr\+\_\+tir\+\_\+reussit@{nbr\+\_\+tir\+\_\+reussit}}
+\index{nbr\+\_\+tir\+\_\+reussit@{nbr\+\_\+tir\+\_\+reussit}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{nbr\+\_\+tir\+\_\+reussit}{nbr\_tir\_reussit}}
+{\footnotesize\ttfamily char joueur\+::nbr\+\_\+tir\+\_\+reussit}
+
+Variable indiquant le nombre de tirs réussis 
+
+Définition à la ligne 49 du fichier header.\+h.
+
+
+
+Référencé par game\+Over(), initialisation(), table\+Board(), et tour().
+
+\mbox{\Hypertarget{structjoueur_a5228c842828b2639253cb7db01e6f72d}\label{structjoueur_a5228c842828b2639253cb7db01e6f72d}} 
+\index{joueur@{joueur}!nom@{nom}}
+\index{nom@{nom}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{nom}{nom}}
+{\footnotesize\ttfamily char$\ast$ joueur\+::nom}
+
+Variable indiquant le nom du joueur 
+
+Définition à la ligne 42 du fichier header.\+h.
+
+
+
+Référencé par afficher(), initialisation(), et print().
+
+\mbox{\Hypertarget{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}\label{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}} 
+\index{joueur@{joueur}!plateau@{plateau}}
+\index{plateau@{plateau}!joueur@{joueur}}
+\subsubsection{\texorpdfstring{plateau}{plateau}}
+{\footnotesize\ttfamily char joueur\+::plateau\mbox{[}\mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{T\+A\+I\+L\+L\+E\+\_\+\+P\+L\+A\+T\+E\+AU}}\mbox{]}\mbox{[}\mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{T\+A\+I\+L\+L\+E\+\_\+\+P\+L\+A\+T\+E\+AU}}\mbox{]}}
+
+
+
+Définition à la ligne 41 du fichier header.\+h.
+
+
+
+Référencé par afficher(), initialisation(), positionement\+Des\+Bateaux(), et tour().
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{header_8h}{header.\+h}}\end{DoxyCompactItemize}

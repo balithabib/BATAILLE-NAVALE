@@ -1,0 +1,52 @@
+\hypertarget{f_8c}{}\section{Référence du fichier f.\+c}
+\label{f_8c}\index{f.\+c@{f.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Graphe des dépendances par inclusion de f.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{f_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{f_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{f_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{f_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{f.\+c@{f.\+c}!main@{main}}
+\index{main@{main}!f.\+c@{f.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne 5 du fichier f.\+c.
+
+
+\begin{DoxyCode}
+5           \{
+6     \textcolor{keywordtype}{int} i = 0;
+7 
+8     \textcolor{keywordtype}{int} nombre\_aleatoire = 0;
+9     \textcolor{keywordtype}{int} tab[16] = \{0\};
+10 
+11     srand(time(NULL)); \textcolor{comment}{// initialisation de rand}
+12 
+13     \textcolor{keywordflow}{for}(i=0; i<10000; i++)\{
+14         tab[rand()\%15 + 1]++;
+15     \}
+16     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 16; ++i)
+17     \{
+18         printf(\textcolor{stringliteral}{"\%d \(\backslash\)t"},tab[i]);
+19     \}
+20     printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+21 
+22     \textcolor{keywordflow}{return} 0;
+23 \}
+\end{DoxyCode}

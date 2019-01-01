@@ -1,0 +1,102 @@
+\hypertarget{initialisation_8c}{}\section{Référence du fichier initialisation.\+c}
+\label{initialisation_8c}\index{initialisation.\+c@{initialisation.\+c}}
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de initialisation.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{initialisation_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structjoueur}{joueur}} $\ast$ \mbox{\hyperlink{initialisation_8c_a0b7a5f024d081c47696bf97c89a367f7}{initialisation}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$player, char $\ast$color, int ia)
+\begin{DoxyCompactList}\small\item\em Une fonction qui fait l\textquotesingle{}initialisation de chaque joueur au début du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+B.\+Habib, A.\+Sofiane, I.\+Tinhinane, I.\+Chafia 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07 Avril 2018
+\end{DoxyDate}
+définition de la fonction initialisation 
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{initialisation_8c_a0b7a5f024d081c47696bf97c89a367f7}\label{initialisation_8c_a0b7a5f024d081c47696bf97c89a367f7}} 
+\index{initialisation.\+c@{initialisation.\+c}!initialisation@{initialisation}}
+\index{initialisation@{initialisation}!initialisation.\+c@{initialisation.\+c}}
+\subsubsection{\texorpdfstring{initialisation()}{initialisation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structjoueur}{joueur}}$\ast$ initialisation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player,  }\item[{char $\ast$}]{color,  }\item[{int}]{ia }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui fait l\textquotesingle{}initialisation de chaque joueur au début du jeu. 
+
+Cette fonction permet d\textquotesingle{}intialiser les champ du joueur passer en argument. 
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & player \+: le joueur. \\
+\hline
+{\em char$\ast$} & color \+: la couleur par défaut du joueur. \\
+\hline
+{\em int} & ia \+: une valeur qui indique la nature du joueur humaine ou ia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+le joueur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 10 du fichier initialisation.\+c.
+
+
+
+Références joueur\+::color, joueur\+::ia, joueur\+::nbr\+\_\+bateau\+\_\+couler, joueur\+::nbr\+\_\+bateau\+\_\+restant, joueur\+::nbr\+\_\+tir\+\_\+manquer, joueur\+::nbr\+\_\+tir\+\_\+reussit, joueur\+::nom, N\+O\+M\+B\+R\+E\+\_\+\+B\+A\+T\+E\+AU, joueur\+::plateau, positionement\+Des\+Bateaux(), et T\+A\+I\+L\+L\+E\+\_\+\+P\+L\+A\+T\+E\+AU.
+
+
+
+Référencé par main(), et menu().
+
+
+\begin{DoxyCode}
+10                                                            \{
+11     \textcolor{keywordtype}{int} ligne, colonne;
+12     player = malloc(\textcolor{keyword}{sizeof} (*player));
+13     printf(\textcolor{stringliteral}{"Donner Le  Nom Du Joueur:"});
+14     player->\mbox{\hyperlink{structjoueur_a5228c842828b2639253cb7db01e6f72d}{nom}} = malloc(10 * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+15     scanf(\textcolor{stringliteral}{"\%s"},player->\mbox{\hyperlink{structjoueur_a5228c842828b2639253cb7db01e6f72d}{nom}});
+16     
+17     \textcolor{keywordflow}{for}(ligne = 0 ; ligne < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} ; ++ligne)
+18         \textcolor{keywordflow}{for}(colonne = 0 ; colonne < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} ; ++colonne)
+19             player->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne] = \textcolor{charliteral}{' '};
+20 
+21     player->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}} = \mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}};
+22     player->\mbox{\hyperlink{structjoueur_ab0c0fa544d83148d4daed41c84954e55}{nbr\_bateau\_couler}} = 0;
+23     player->\mbox{\hyperlink{structjoueur_a4f902c486f8d66cb85cf3b07abd0bd12}{nbr\_bateau\_restant}} = \mbox{\hyperlink{header_8h_a56aaacd8cb8ffd138094887b2d3344f6}{NOMBRE\_BATEAU}};
+24     player->\mbox{\hyperlink{structjoueur_a19510a02b4ff3f6336da487b50806d71}{nbr\_tir\_reussit}} = 0;
+25     player->\mbox{\hyperlink{structjoueur_aaba095a23d03a15d363924e77caa3c1e}{nbr\_tir\_manquer}} = 0;
+26     player->\mbox{\hyperlink{structjoueur_a1064ba94d4d2719446f3c609135ba362}{color}} = \mbox{\hyperlink{structjoueur_a1064ba94d4d2719446f3c609135ba362}{color}};
+27     
+28     player = \mbox{\hyperlink{header_8h_a92c11248eb6a0ae0b0316938f3f07351}{positionementDesBateaux}}(player);
+29     \textcolor{keywordflow}{return} player;
+30 \}
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{initialisation_8c_a0b7a5f024d081c47696bf97c89a367f7_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{initialisation_8c_a0b7a5f024d081c47696bf97c89a367f7_icgraph}
+\end{center}
+\end{figure}

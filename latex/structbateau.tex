@@ -1,0 +1,182 @@
+\hypertarget{structbateau}{}\section{Référence de la structure bateau}
+\label{structbateau}\index{bateau@{bateau}}
+
+
+Structure qui représente un bateau.  
+
+
+
+
+{\ttfamily \#include $<$header.\+h$>$}
+
+
+
+Graphe de collaboration de bateau\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{structbateau__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\+\_\+case\+\_\+ligne}}
+\item 
+char \mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\+\_\+case\+\_\+colonne}}
+\item 
+char \mbox{\hyperlink{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}{position\+\_\+ligne}}
+\item 
+char \mbox{\hyperlink{structbateau_aac775edde7cde57176e580c29f6e8eca}{position\+\_\+colonne}}
+\item 
+char \mbox{\hyperlink{structbateau_a62ae80832c521a9984c520fde88dadfd}{nbr\+\_\+case\+\_\+toucher}}
+\item 
+char \mbox{\hyperlink{structbateau_aff445dc58a52069759f1e4bfd13c0313}{nbr\+\_\+case\+\_\+total}}
+\item 
+int \mbox{\hyperlink{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}{normale}}
+\item 
+int \mbox{\hyperlink{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}{type}}
+\item 
+char $\ast$ \mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Structure qui représente un bateau. 
+
+Définition à la ligne 26 du fichier header.\+h.
+
+
+
+\subsection{Documentation des champs}
+\mbox{\Hypertarget{structbateau_a41910d4781ab6f3256d23f62b98c49a1}\label{structbateau_a41910d4781ab6f3256d23f62b98c49a1}} 
+\index{bateau@{bateau}!color@{color}}
+\index{color@{color}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily char$\ast$ bateau\+::color}
+
+Variable indiquant la couleur du bateau 
+
+Définition à la ligne 35 du fichier header.\+h.
+
+
+
+Référencé par compar(), et positionement\+Des\+Bateaux().
+
+\mbox{\Hypertarget{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}\label{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}} 
+\index{bateau@{bateau}!nbr\+\_\+case\+\_\+colonne@{nbr\+\_\+case\+\_\+colonne}}
+\index{nbr\+\_\+case\+\_\+colonne@{nbr\+\_\+case\+\_\+colonne}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{nbr\+\_\+case\+\_\+colonne}{nbr\_case\_colonne}}
+{\footnotesize\ttfamily char bateau\+::nbr\+\_\+case\+\_\+colonne}
+
+Variable indiquant le nombre de cases par colonne 
+
+Définition à la ligne 28 du fichier header.\+h.
+
+
+
+Référencé par compar(), positionement\+Des\+Bateaux(), et tour().
+
+\mbox{\Hypertarget{structbateau_a5f7637b2932717e5589e1a368dd1b47b}\label{structbateau_a5f7637b2932717e5589e1a368dd1b47b}} 
+\index{bateau@{bateau}!nbr\+\_\+case\+\_\+ligne@{nbr\+\_\+case\+\_\+ligne}}
+\index{nbr\+\_\+case\+\_\+ligne@{nbr\+\_\+case\+\_\+ligne}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{nbr\+\_\+case\+\_\+ligne}{nbr\_case\_ligne}}
+{\footnotesize\ttfamily char bateau\+::nbr\+\_\+case\+\_\+ligne}
+
+Variable indiquant le nomre de cases par ligne 
+
+Définition à la ligne 27 du fichier header.\+h.
+
+
+
+Référencé par compar(), positionement\+Des\+Bateaux(), et tour().
+
+\mbox{\Hypertarget{structbateau_aff445dc58a52069759f1e4bfd13c0313}\label{structbateau_aff445dc58a52069759f1e4bfd13c0313}} 
+\index{bateau@{bateau}!nbr\+\_\+case\+\_\+total@{nbr\+\_\+case\+\_\+total}}
+\index{nbr\+\_\+case\+\_\+total@{nbr\+\_\+case\+\_\+total}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{nbr\+\_\+case\+\_\+total}{nbr\_case\_total}}
+{\footnotesize\ttfamily char bateau\+::nbr\+\_\+case\+\_\+total}
+
+Variable indiquant le nombre de case total 
+
+Définition à la ligne 32 du fichier header.\+h.
+
+
+
+Référencé par compar(), positionement\+Des\+Bateaux(), et table\+Board().
+
+\mbox{\Hypertarget{structbateau_a62ae80832c521a9984c520fde88dadfd}\label{structbateau_a62ae80832c521a9984c520fde88dadfd}} 
+\index{bateau@{bateau}!nbr\+\_\+case\+\_\+toucher@{nbr\+\_\+case\+\_\+toucher}}
+\index{nbr\+\_\+case\+\_\+toucher@{nbr\+\_\+case\+\_\+toucher}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{nbr\+\_\+case\+\_\+toucher}{nbr\_case\_toucher}}
+{\footnotesize\ttfamily char bateau\+::nbr\+\_\+case\+\_\+toucher}
+
+Variable indiquant le nombre de case toucher 
+
+Définition à la ligne 31 du fichier header.\+h.
+
+
+
+Référencé par compar(), positionement\+Des\+Bateaux(), table\+Board(), et tour().
+
+\mbox{\Hypertarget{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}\label{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}} 
+\index{bateau@{bateau}!normale@{normale}}
+\index{normale@{normale}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{normale}{normale}}
+{\footnotesize\ttfamily int bateau\+::normale}
+
+Variable indiquant le nature du bateau 
+
+Définition à la ligne 33 du fichier header.\+h.
+
+
+
+Référencé par positionement\+Des\+Bateaux().
+
+\mbox{\Hypertarget{structbateau_aac775edde7cde57176e580c29f6e8eca}\label{structbateau_aac775edde7cde57176e580c29f6e8eca}} 
+\index{bateau@{bateau}!position\+\_\+colonne@{position\+\_\+colonne}}
+\index{position\+\_\+colonne@{position\+\_\+colonne}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{position\+\_\+colonne}{position\_colonne}}
+{\footnotesize\ttfamily char bateau\+::position\+\_\+colonne}
+
+Variable indiquant la colonne exacte du bateau 
+
+Définition à la ligne 30 du fichier header.\+h.
+
+
+
+Référencé par compar(), positionement\+Des\+Bateaux(), et tour().
+
+\mbox{\Hypertarget{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}\label{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}} 
+\index{bateau@{bateau}!position\+\_\+ligne@{position\+\_\+ligne}}
+\index{position\+\_\+ligne@{position\+\_\+ligne}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{position\+\_\+ligne}{position\_ligne}}
+{\footnotesize\ttfamily char bateau\+::position\+\_\+ligne}
+
+Variable indiquant la ligne exacte du bateau 
+
+Définition à la ligne 29 du fichier header.\+h.
+
+
+
+Référencé par compar(), positionement\+Des\+Bateaux(), et tour().
+
+\mbox{\Hypertarget{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}\label{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}} 
+\index{bateau@{bateau}!type@{type}}
+\index{type@{type}!bateau@{bateau}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily int bateau\+::type}
+
+Variable indiquant le type du bateau 
+
+Définition à la ligne 34 du fichier header.\+h.
+
+
+
+Référencé par positionement\+Des\+Bateaux().
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{header_8h}{header.\+h}}\end{DoxyCompactItemize}

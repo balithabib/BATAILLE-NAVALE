@@ -1,0 +1,8 @@
+<map id="tableBoard" name="tableBoard">
+<area shape="rect" id="node2" href="$header_8h.html#a1882d910cc0b88d8631b7a8426d8b303" title="Une fonction qui affiche le plateau de jeu. " alt="" coords="137,56,203,83"/>
+<area shape="rect" id="node3" href="$initialisation_8c.html#a8edf730e748473fb051d022277383050" title="Une fonction qui fait l&#39;initialisation de chaque joueur au début du jeu. " alt="" coords="251,5,341,32"/>
+<area shape="rect" id="node6" href="$jeux_8c.html#a29b135d62d5de0ac6c74856380deaddc" title="Une fonction qui déroule le jeu. " alt="" coords="277,56,315,83"/>
+<area shape="rect" id="node7" href="$jeux_8c.html#acd10ba249ce6e030539b62e3bb45fd17" title="une fonction qui déroule jeu avancer de N coupe simuler " alt="" coords="251,107,341,133"/>
+<area shape="rect" id="node4" href="$menu_8c.html#a2a0e843767aeea4f433a28b9c54f573a" title="Une fonction qui affiche le menu du jeu. " alt="" coords="389,56,444,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="492,56,543,83"/>
+</map>

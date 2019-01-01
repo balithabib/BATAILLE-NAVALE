@@ -1,0 +1,8 @@
+<map id="print" name="print">
+<area shape="rect" id="node2" href="$jeux_8c.html#a3610cb607e2029a8583ce054be882fbc" title="Une fonction qui vérifier la fin du jeu. " alt="" coords="100,56,183,83"/>
+<area shape="rect" id="node3" href="$jeux_8c.html#a740a3255999f6e89a7a7d6fc7a045caa" title="Une fonction qui déroule le jeu. " alt="" coords="256,5,295,32"/>
+<area shape="rect" id="node6" href="$jeux_8c.html#a08ee89b1bab3612448b36d13faab6fa8" title="une fonction qui déroule jeu avancer de N coupe simuler " alt="" coords="231,107,320,133"/>
+<area shape="rect" id="node7" href="$tester_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="250,56,301,83"/>
+<area shape="rect" id="node4" href="$menu_8c.html#a2a0e843767aeea4f433a28b9c54f573a" title="Une fonction qui affiche le menu du jeu. " alt="" coords="368,56,423,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="471,56,521,83"/>
+</map>

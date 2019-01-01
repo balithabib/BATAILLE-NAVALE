@@ -1,0 +1,112 @@
+\hypertarget{tour_8c}{}\section{Référence du fichier tour.\+c}
+\label{tour_8c}\index{tour.\+c@{tour.\+c}}
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de tour.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{tour_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structjoueur}{joueur}} $\ast$ \mbox{\hyperlink{tour_8c_aadff1874927a9be4d824b9b291457d7d}{tour}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$player1, \mbox{\hyperlink{structjoueur}{joueur}} $\ast$player2)
+\begin{DoxyCompactList}\small\item\em Une fonction qui déroule le tour d\textquotesingle{}un jour. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{tour_8c_aadff1874927a9be4d824b9b291457d7d}\label{tour_8c_aadff1874927a9be4d824b9b291457d7d}} 
+\index{tour.\+c@{tour.\+c}!tour@{tour}}
+\index{tour@{tour}!tour.\+c@{tour.\+c}}
+\subsubsection{\texorpdfstring{tour()}{tour()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structjoueur}{joueur}}$\ast$ tour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player1,  }\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player2 }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui déroule le tour d\textquotesingle{}un jour. 
+
+Cette fonction permet de jouer un tour. 
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & player1 \+: le joueur qui joue ~\newline
+\\
+\hline
+{\em joueur$\ast$} & player2 \+: le joueur l\textquotesingle{}adversaire. ~\newline
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le joueur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 10 du fichier tour.\+c.
+
+
+
+Références joueur\+::bat, joueur\+::ia, bateau\+::nbr\+\_\+case\+\_\+colonne, bateau\+::nbr\+\_\+case\+\_\+ligne, bateau\+::nbr\+\_\+case\+\_\+toucher, joueur\+::nbr\+\_\+tir\+\_\+manquer, joueur\+::nbr\+\_\+tir\+\_\+reussit, N\+O\+M\+B\+R\+E\+\_\+\+B\+A\+T\+E\+AU, joueur\+::plateau, bateau\+::position\+\_\+colonne, bateau\+::position\+\_\+ligne, et T\+A\+I\+L\+L\+E\+\_\+\+P\+L\+A\+T\+E\+AU.
+
+
+
+Référencé par jeu(), jeu\+A\+N\+Coup(), et main().
+
+
+\begin{DoxyCode}
+10                                               \{
+11   \textcolor{keywordtype}{int} ligne,colonne,occuper,i;
+12 
+13   \textcolor{keywordflow}{do}\{
+14     occuper = 0;
+15     \textcolor{comment}{// Obtenir le choix du joueur1 pour attaque une case  }
+16     \textcolor{keywordflow}{if}(!player1->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}})\{
+17       \textcolor{comment}{// Si le joueur1 est un humaine}
+18       \textcolor{keywordflow}{do}\{
+19           printf(\textcolor{stringliteral}{"(ligne,colonne) :"});
+20           scanf(\textcolor{stringliteral}{"\%d \%d"},\&ligne,\&colonne);
+21       \}\textcolor{keywordflow}{while}((ligne > \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} || ligne < 0) || (colonne > 
+      \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} || colonne < 0));
+22     \}\textcolor{keywordflow}{else}\{
+23       \textcolor{comment}{// Si le joueur1 est une IA}
+24       ligne = rand()\%\mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} + 1;
+25       colonne = rand()\%\mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} + 1;
+26     \}
+27     \textcolor{comment}{// Savoir quelle case est touché celle d'un bateau ou une case vide ou une deja joue précdament }
+28     \textcolor{keywordflow}{if}(player2->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne - 1][colonne - 1] == \textcolor{charliteral}{'\#'})\{
+29       \textcolor{comment}{//bateau toucher incrémentation du nombre de tire réussi}
+30       player2->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne - 1][colonne - 1] = \textcolor{charliteral}{'X'};
+31       player1->\mbox{\hyperlink{structjoueur_a19510a02b4ff3f6336da487b50806d71}{nbr\_tir\_reussit}}++;
+32       \textcolor{comment}{// Savoir quelle bateau est toucher est incrémenter le nombre de case toucher pour ce bateau }
+33       \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{header_8h_a56aaacd8cb8ffd138094887b2d3344f6}{NOMBRE\_BATEAU}}; ++i)\{
+34         \textcolor{keywordflow}{if}(((colonne - 1 >= player2-> \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_aac775edde7cde57176e580c29f6e8eca}{position\_colonne}})
+35             \&\& (colonne - 1 < player2-> \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_aac775edde7cde57176e580c29f6e8eca}{position\_colonne}} + player2-> 
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}})) \&\&
+36             ((ligne - 1 >= player2-> \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}{position\_ligne}})
+37             \&\& (ligne  - 1< player2-> \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}{position\_ligne}} + player2->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}})))\{
+38           player2->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a62ae80832c521a9984c520fde88dadfd}{nbr\_case\_toucher}}++;
+39           \textcolor{keywordflow}{break};
+40         \}
+41       \}
+42     \}
+43     \textcolor{keywordflow}{else}\{
+44       \textcolor{keywordflow}{if} (player2->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne - 1][colonne - 1] == \textcolor{charliteral}{'X'} || player2->
+      \mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne - 1][colonne - 1] == \textcolor{charliteral}{'O'} )
+45         occuper = 1;\textcolor{comment}{// Case précédament toucher }
+46       \textcolor{keywordflow}{else}\{
+47         \textcolor{comment}{// case vide toucher incréménter le nombre de tir manger}
+48         player2->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne - 1][colonne - 1] = \textcolor{charliteral}{'O'};
+49         player1->\mbox{\hyperlink{structjoueur_aaba095a23d03a15d363924e77caa3c1e}{nbr\_tir\_manquer}}++;
+50       \}
+51     \}
+52   \}\textcolor{keywordflow}{while}(occuper == 1);
+53 
+54   \textcolor{keywordflow}{return} player2;
+55 \}
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tour_8c_aadff1874927a9be4d824b9b291457d7d_icgraph}
+\end{center}
+\end{figure}

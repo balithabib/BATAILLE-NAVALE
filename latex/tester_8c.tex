@@ -1,0 +1,74 @@
+\hypertarget{tester_8c}{}\section{Référence du fichier tester.\+c}
+\label{tester_8c}\index{tester.\+c@{tester.\+c}}
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de tester.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{tester_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tester_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{tester_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{tester_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{tester.\+c@{tester.\+c}!main@{main}}
+\index{main@{main}!tester.\+c@{tester.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne 4 du fichier tester.\+c.
+
+
+
+Références game\+Over(), G\+R\+E\+EN, initialisation(), tour(), et Y\+E\+L\+L\+OW.
+
+
+\begin{DoxyCode}
+4                 \{
+5   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i< 100;i++)\{
+6   printf (\textcolor{stringliteral}{"Debut des tests\(\backslash\)n"});
+7   
+8   \mbox{\hyperlink{structjoueur}{joueur}}* player1 = NULL;
+9   player1 = \mbox{\hyperlink{header_8h_aa69260c04e3640b56e402f842f5b7448}{initialisation}}(player1,\mbox{\hyperlink{header_8h_acfbc006ea433ad708fdee3e82996e721}{GREEN}},1);
+10   assert (player1 != NULL);
+11 
+12   \mbox{\hyperlink{structjoueur}{joueur}}* player2 = NULL;
+13   player2 = \mbox{\hyperlink{header_8h_aa69260c04e3640b56e402f842f5b7448}{initialisation}}(player2,\mbox{\hyperlink{header_8h_abf681265909adf3d3e8116c93c0ba179}{YELLOW}},1);
+14   assert (player2 != NULL);
+15   
+16   \mbox{\hyperlink{structjoueur}{joueur}}* joueurActualle = player1;
+17   \textcolor{keywordflow}{while}(!\mbox{\hyperlink{header_8h_a3106323267d0c2e16a73616d1666831a}{gameOver}}(joueurActualle))\{
+18 
+19     joueurActualle = player1;
+20     player2 = \mbox{\hyperlink{header_8h_a92241da559f8c98b3ec5a99f4d151658}{tour}}(player1, player2);
+21 
+22     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{header_8h_a3106323267d0c2e16a73616d1666831a}{gameOver}}(joueurActualle))\{
+23 
+24       joueurActualle = player2;
+25       player1 = \mbox{\hyperlink{header_8h_a92241da559f8c98b3ec5a99f4d151658}{tour}}(player2, player1);      
+26     \}\textcolor{keywordflow}{else}\{
+27       \textcolor{keywordflow}{break};
+28     \}
+29   \}
+30   printf(\textcolor{stringliteral}{"\(\backslash\)n-------------------------------\(\backslash\)n"});
+31   \}
+32   printf (\textcolor{stringliteral}{"Tout est OK\(\backslash\)n"});
+33 
+34   \textcolor{keywordflow}{return} (EXIT\_SUCCESS);
+35 \}
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tester_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}

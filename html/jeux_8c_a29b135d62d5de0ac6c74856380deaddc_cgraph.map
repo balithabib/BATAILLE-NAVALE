@@ -1,0 +1,8 @@
+<map id="jeu" name="jeu">
+<area shape="rect" id="node2" href="$affichage_8c.html#a209debb410c9d2f0f228cd80be00df72" title="Une fonction qui affiche le plateau de jeu. " alt="" coords="101,31,166,57"/>
+<area shape="rect" id="node5" href="$jeux_8c.html#a43cf1dd9eb2dd942b62262931bd6197a" title="Une fonction qui vérifier la fin du jeu. " alt="" coords="92,81,175,108"/>
+<area shape="rect" id="node6" href="$affichage_8c.html#a354c88e4355e2f7dde5873ba1ddad123" title="Une fonction qui affiche différent messager de mise en forme dasn le jeu a l&#39;aide d&#39;un int donner com..." alt="" coords="241,119,288,145"/>
+<area shape="rect" id="node7" href="$header_8h.html#a8970b2d3bc09968bd0a719c917871946" title="Une fonction qui déroule le tour d&#39;un jour. " alt="" coords="111,183,155,209"/>
+<area shape="rect" id="node3" href="$affichage_8c.html#afc6a7e2f3ed423adf68d75b525a0ffa7" title="Une fonction qui récupere une couleur selon des conditions. " alt="" coords="232,5,297,32"/>
+<area shape="rect" id="node4" href="$affichage_8c.html#a671ab408369ac69a9b4d3afc29c6fd21" title="Une fonction qui affiche le resultat du joueur actuelle à chaque tour. " alt="" coords="223,56,307,83"/>
+</map>

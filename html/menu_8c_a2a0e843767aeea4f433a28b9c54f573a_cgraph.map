@@ -1,0 +1,12 @@
+<map id="menu" name="menu">
+<area shape="rect" id="node2" href="$header_8h.html#aa69260c04e3640b56e402f842f5b7448" title="Une fonction qui fait l&#39;initialisation de chaque joueur au début du jeu. " alt="" coords="108,31,199,57"/>
+<area shape="rect" id="node4" href="$header_8h.html#ad3e31aecff504dec8a8efee4b732c96c" title="Une fonction qui déroule le jeu. " alt="" coords="134,107,173,133"/>
+<area shape="rect" id="node11" href="$header_8h.html#abe8c11f21b141fd8d7826bebb3f1c46b" title="une fonction qui déroule jeu avancer de N coupe simuler " alt="" coords="109,157,198,184"/>
+<area shape="rect" id="node3" href="$header_8h.html#a92c11248eb6a0ae0b0316938f3f07351" title="Une fonction qui posision les bateau de la bonne façon à chaque debut de jeu apres l&#39;initialisation..." alt="" coords="247,5,421,32"/>
+<area shape="rect" id="node5" href="$affichage_8c.html#a8004c5a076f6d53e90583b921ac810cb" title="Une fonction qui affiche le plateau de jeu. " alt="" coords="301,259,367,285"/>
+<area shape="rect" id="node8" href="$jeux_8c.html#a3610cb607e2029a8583ce054be882fbc" title="Une fonction qui vérifier la fin du jeu. " alt="" coords="293,107,375,133"/>
+<area shape="rect" id="node9" href="$affichage_8c.html#a34b6e28e00a180632a300b9608ad6acd" title="Une fonction qui affiche différent messager de mise en forme dasn le jeu a l&#39;aide d&#39;un int donner com..." alt="" coords="488,107,535,133"/>
+<area shape="rect" id="node10" href="$header_8h.html#a92241da559f8c98b3ec5a99f4d151658" title="Une fonction qui déroule le tour d&#39;un jour. " alt="" coords="312,157,356,184"/>
+<area shape="rect" id="node6" href="$affichage_8c.html#adba405b6c8341bbae8459669db1aa775" title="Une fonction qui récupere une couleur selon des conditions. " alt="" coords="479,233,544,260"/>
+<area shape="rect" id="node7" href="$affichage_8c.html#a671ab408369ac69a9b4d3afc29c6fd21" title="Une fonction qui affiche le resultat du joueur actuelle à chaque tour. " alt="" coords="469,284,553,311"/>
+</map>

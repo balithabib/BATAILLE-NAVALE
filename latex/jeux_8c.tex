@@ -1,0 +1,238 @@
+\hypertarget{jeux_8c}{}\section{Référence du fichier jeux.\+c}
+\label{jeux_8c}\index{jeux.\+c@{jeux.\+c}}
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de jeux.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{jeux_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{jeux_8c_a3610cb607e2029a8583ce054be882fbc}{game\+Over}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Une fonction qui vérifier la fin du jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeux_8c_a740a3255999f6e89a7a7d6fc7a045caa}{jeu}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$player1, \mbox{\hyperlink{structjoueur}{joueur}} $\ast$player2)
+\begin{DoxyCompactList}\small\item\em Une fonction qui déroule le jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{jeux_8c_a08ee89b1bab3612448b36d13faab6fa8}{jeu\+A\+N\+Coup}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$player1, \mbox{\hyperlink{structjoueur}{joueur}} $\ast$player2, int n)
+\begin{DoxyCompactList}\small\item\em une fonction qui déroule jeu avancer de N coupe simuler \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{jeux_8c_a3610cb607e2029a8583ce054be882fbc}\label{jeux_8c_a3610cb607e2029a8583ce054be882fbc}} 
+\index{jeux.\+c@{jeux.\+c}!game\+Over@{game\+Over}}
+\index{game\+Over@{game\+Over}!jeux.\+c@{jeux.\+c}}
+\subsubsection{\texorpdfstring{game\+Over()}{gameOver()}}
+{\footnotesize\ttfamily int game\+Over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui vérifier la fin du jeu. 
+
+Cette fonction permet de savoir la fin du jeu en testent l\textquotesingle{}égaliter entre le nombre de tir reussit et le nombre de case total pour l\textquotesingle{}ensemble des bateaux ~\newline
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & player \+: le joueur concerner. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 8 du fichier jeux.\+c.
+
+
+
+Références joueur\+::nbr\+\_\+tir\+\_\+reussit, N\+O\+M\+B\+R\+E\+\_\+\+C\+A\+S\+E\+\_\+\+B\+A\+T\+E\+AU, et print().
+
+
+
+Référencé par jeu(), jeu\+A\+N\+Coup(), et main().
+
+
+\begin{DoxyCode}
+8                             \{
+9   \textcolor{keywordflow}{if}(player->\mbox{\hyperlink{structjoueur_a19510a02b4ff3f6336da487b50806d71}{nbr\_tir\_reussit}} == \mbox{\hyperlink{header_8h_a491086a202f32f357e418a99cde7156e}{NOMBRE\_CASE\_BATEAU}})\{
+10     \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(player, 2);
+11     \textcolor{keywordflow}{return} 1;
+12   \}
+13   \textcolor{keywordflow}{else} 
+14     \textcolor{keywordflow}{return} 0; 
+15 \}
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{jeux_8c_a3610cb607e2029a8583ce054be882fbc_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeux_8c_a3610cb607e2029a8583ce054be882fbc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{jeux_8c_a740a3255999f6e89a7a7d6fc7a045caa}\label{jeux_8c_a740a3255999f6e89a7a7d6fc7a045caa}} 
+\index{jeux.\+c@{jeux.\+c}!jeu@{jeu}}
+\index{jeu@{jeu}!jeux.\+c@{jeux.\+c}}
+\subsubsection{\texorpdfstring{jeu()}{jeu()}}
+{\footnotesize\ttfamily void jeu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player1,  }\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player2 }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui déroule le jeu. 
+
+Cette fonction permet de jouer à une partie du jeu. 
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & player1 \+: le joueur 1. \\
+\hline
+{\em joueur$\ast$} & player2 \+: le joueur 2. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 22 du fichier jeux.\+c.
+
+
+
+Références afficher(), game\+Over(), joueur\+::ia, print(), et tour().
+
+
+
+Référencé par menu().
+
+
+\begin{DoxyCode}
+22                                          \{
+23   \mbox{\hyperlink{structjoueur}{joueur}}* joueurActualle;
+24   \textcolor{keywordtype}{int} i = 0;
+25     
+26   joueurActualle = player1;
+27   \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(joueurActualle,3);
+28   \textcolor{keywordflow}{while}(!\mbox{\hyperlink{jeux_8c_a3610cb607e2029a8583ce054be882fbc}{gameOver}}(joueurActualle))\{
+29   \textcolor{comment}{// Le joueur 1 jeu son tour}
+30     joueurActualle = player1;
+31     \textcolor{keywordflow}{if}(player1->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}} == player2->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}})\{
+32       \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(joueurActualle, 1);
+33       \mbox{\hyperlink{affichage_8c_a8004c5a076f6d53e90583b921ac810cb}{afficher}}(player2, player1,1);
+34     \}
+35     \textcolor{comment}{// Le joueur 1 choisit une case du plateau du joueur 2 }
+36     player2 = \mbox{\hyperlink{header_8h_a92241da559f8c98b3ec5a99f4d151658}{tour}}(player1, player2);
+37     \textcolor{keywordflow}{if}(player1->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}} == player2->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}}) \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(joueurActualle, 0);
+38     \textcolor{comment}{//On teste c'est le joueur 1  à gagner}
+39     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{jeux_8c_a3610cb607e2029a8583ce054be882fbc}{gameOver}}(joueurActualle))\{
+40     \textcolor{comment}{// Le joueur 2 jeu son tour}
+41       joueurActualle = player2;
+42       \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(joueurActualle, 1);  
+43       \mbox{\hyperlink{affichage_8c_a8004c5a076f6d53e90583b921ac810cb}{afficher}}(player1, player2,1);
+44       \textcolor{comment}{// Le joueur 2 choisit une case du plateau du joueur 1}
+45       player1 = \mbox{\hyperlink{header_8h_a92241da559f8c98b3ec5a99f4d151658}{tour}}(player2, player1);      
+46       \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(joueurActualle, 0);
+47     \}\textcolor{keywordflow}{else}\{
+48       \textcolor{keywordflow}{break};
+49     \}
+50     i++;
+51   \}
+52   printf(\textcolor{stringliteral}{"Le nombre de tour joue = \%d\(\backslash\)n"},i);
+53 \}
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{jeux_8c_a740a3255999f6e89a7a7d6fc7a045caa_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{jeux_8c_a740a3255999f6e89a7a7d6fc7a045caa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{jeux_8c_a08ee89b1bab3612448b36d13faab6fa8}\label{jeux_8c_a08ee89b1bab3612448b36d13faab6fa8}} 
+\index{jeux.\+c@{jeux.\+c}!jeu\+A\+N\+Coup@{jeu\+A\+N\+Coup}}
+\index{jeu\+A\+N\+Coup@{jeu\+A\+N\+Coup}!jeux.\+c@{jeux.\+c}}
+\subsubsection{\texorpdfstring{jeu\+A\+N\+Coup()}{jeuANCoup()}}
+{\footnotesize\ttfamily void jeu\+A\+N\+Coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player1,  }\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player2,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+une fonction qui déroule jeu avancer de N coupe simuler 
+
+Cette fonction permet d\textquotesingle{}avancer la parti à un coup. 
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & player1 \+: le joueur 1. \\
+\hline
+{\em joueur$\ast$} & player2 \+: le joueur 2. \\
+\hline
+{\em int} & n \+: le nombre de tour que on veut avancé le jeu. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 61 du fichier jeux.\+c.
+
+
+
+Références afficher(), game\+Over(), joueur\+::ia, print(), et tour().
+
+
+
+Référencé par menu().
+
+
+\begin{DoxyCode}
+61                                                      \{
+62   \mbox{\hyperlink{structjoueur}{joueur}}* joueurActualle = player1;
+63   \textcolor{keywordtype}{int} i = 0, ia1 = player1->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}}, ia2 = player2->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}};
+64 
+65   \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(joueurActualle,3);
+66   player1->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}} = 1;
+67   player2->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}} = 1;
+68   \textcolor{keywordflow}{while}(!\mbox{\hyperlink{jeux_8c_a3610cb607e2029a8583ce054be882fbc}{gameOver}}(joueurActualle) \&\& (i < n))\{
+69     joueurActualle = player1;
+70     player2 = \mbox{\hyperlink{header_8h_a92241da559f8c98b3ec5a99f4d151658}{tour}}(player1, player2);
+71     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{jeux_8c_a3610cb607e2029a8583ce054be882fbc}{gameOver}}(joueurActualle))\{
+72       joueurActualle = player2;
+73       player1 = \mbox{\hyperlink{header_8h_a92241da559f8c98b3ec5a99f4d151658}{tour}}(player2, player1);
+74     \}
+75     i++;
+76   \}
+77   player1->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}} = ia1;
+78   player2->\mbox{\hyperlink{structjoueur_a307e3b4b4c1b78e753c599bc1f6a47c3}{ia}} = ia2;
+79   \textcolor{keywordflow}{while}(!\mbox{\hyperlink{jeux_8c_a3610cb607e2029a8583ce054be882fbc}{gameOver}}(joueurActualle))\{
+80     joueurActualle = player1;
+81     \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(joueurActualle, 1);
+82     \mbox{\hyperlink{affichage_8c_a8004c5a076f6d53e90583b921ac810cb}{afficher}}(player2, player1, 1);
+83     player2 = \mbox{\hyperlink{header_8h_a92241da559f8c98b3ec5a99f4d151658}{tour}}(player1, player2);
+84     \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(player2, 0);
+85 
+86     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{jeux_8c_a3610cb607e2029a8583ce054be882fbc}{gameOver}}(joueurActualle))\{
+87       joueurActualle = player2;
+88       \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(joueurActualle, 1);
+89       \mbox{\hyperlink{affichage_8c_a8004c5a076f6d53e90583b921ac810cb}{afficher}}(player1, player2, 1);
+90       player1 = \mbox{\hyperlink{header_8h_a92241da559f8c98b3ec5a99f4d151658}{tour}}(player2, player1);
+91       \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}}(player2, 0);
+92     \}\textcolor{keywordflow}{else} 
+93       \textcolor{keywordflow}{break};
+94     i++;
+95   \}
+96   printf(\textcolor{stringliteral}{"Le nombre de tour joue = \%d\(\backslash\)n"},i);
+97 \}
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{jeux_8c_a08ee89b1bab3612448b36d13faab6fa8_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{jeux_8c_a08ee89b1bab3612448b36d13faab6fa8_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,354 @@
+\hypertarget{affichage_8c}{}\section{Référence du fichier affichage.\+c}
+\label{affichage_8c}\index{affichage.\+c@{affichage.\+c}}
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de affichage.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{affichage_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{affichage_8c_a8004c5a076f6d53e90583b921ac810cb}{afficher}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$joueur1, \mbox{\hyperlink{structjoueur}{joueur}} $\ast$joueur2, int cacher)
+\begin{DoxyCompactList}\small\item\em Une fonction qui affiche le plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}{print}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$player, int c)
+\begin{DoxyCompactList}\small\item\em Une fonction qui affiche différent messager de mise en forme dasn le jeu a l\textquotesingle{}aide d\textquotesingle{}un int donner comme argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{affichage_8c_a671ab408369ac69a9b4d3afc29c6fd21}{table\+Board}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Une fonction qui affiche le resultat du joueur actuelle à chaque tour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{affichage_8c_adba405b6c8341bbae8459669db1aa775}{compar}} (int ligne, int colonne, \mbox{\hyperlink{structjoueur}{joueur}} $\ast$player, int choix, char $\ast$$\ast$\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}})
+\begin{DoxyCompactList}\small\item\em Une fonction qui récupere une couleur selon des conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+B.\+Habib, A.\+Sofiane, I.\+Tinhinane, I.\+Chafia 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07 Avril 2018
+\end{DoxyDate}
+définition de tous les fonction d\textquotesingle{}affichage 
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{affichage_8c_a8004c5a076f6d53e90583b921ac810cb}\label{affichage_8c_a8004c5a076f6d53e90583b921ac810cb}} 
+\index{affichage.\+c@{affichage.\+c}!afficher@{afficher}}
+\index{afficher@{afficher}!affichage.\+c@{affichage.\+c}}
+\subsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void afficher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{joueur1,  }\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{joueur2,  }\item[{int}]{cacher }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui affiche le plateau de jeu. 
+
+Cette fonction permet d\textquotesingle{}afficher tous le contenu du plateau les deux grilles des deux joueur une grille cacher du joueur adversaire et l\textquotesingle{}autre afficher normale celle du joueur actuelle. 
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & joueur1 \+: le joueur adversaire. \\
+\hline
+{\em joueur$\ast$} & joueur2 \+: le joueur actuelle. \\
+\hline
+{\em int} & cacher \+: une variable qui nous dit a ce que en fait un affichage cacher ou pas. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 10 du fichier affichage.\+c.
+
+
+
+Références joueur\+::color, compar(), couleur, joueur\+::nom, joueur\+::plateau, R\+ED, table\+Board(), T\+A\+I\+L\+L\+E\+\_\+\+P\+L\+A\+T\+E\+AU, et W\+H\+I\+TE.
+
+
+
+Référencé par jeu(), et jeu\+A\+N\+Coup().
+
+
+\begin{DoxyCode}
+10                                                            \{
+11     \textcolor{keywordtype}{int} ligne, colonne, i;
+12     \textcolor{keywordtype}{char}* \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}};
+13     \mbox{\hyperlink{affichage_8c_a671ab408369ac69a9b4d3afc29c6fd21}{tableBoard}}(joueur2); \textcolor{comment}{// lLa fonction qui affiche des informations sur le resultat du jeu pour
+       chaque joueur }
+14     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\textcolor{stringliteral}{"47"});\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});printf(\textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t  Plateau du joueur \%s  "},joueur1->
+      \mbox{\hyperlink{structjoueur_a5228c842828b2639253cb7db01e6f72d}{nom}});\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});
+15     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\textcolor{stringliteral}{"47"});\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});printf(\textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t  Mon Plateau  \%s \(\backslash\)n"},joueur2->
+      \mbox{\hyperlink{structjoueur_a5228c842828b2639253cb7db01e6f72d}{nom}});\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});
+16     \textcolor{comment}{// Afficher les numeros de colonne pour la grille de l'adversaire  (player 1)}
+17     \textcolor{keywordflow}{for}(colonne = 1 ; colonne <= \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} ; ++colonne)
+18         \textcolor{keywordflow}{if}(colonne < 10)
+19             printf(\textcolor{stringliteral}{"  \%d "},colonne);
+20         \textcolor{keywordflow}{else}
+21             printf(\textcolor{stringliteral}{" \%d "},colonne);
+22     printf(\textcolor{stringliteral}{"      "});
+23     \textcolor{comment}{// Afficher les numeros de colonne pour la grille de jouer actuelle (player 2)}
+24     \textcolor{keywordflow}{for}(colonne = 1 ; colonne <= \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} ; ++colonne)
+25         \textcolor{keywordflow}{if}(colonne < 10)
+26             printf(\textcolor{stringliteral}{"  \%d "},colonne);
+27         \textcolor{keywordflow}{else}
+28             printf(\textcolor{stringliteral}{" \%d "},colonne);
+29     printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+30 
+31     \textcolor{keywordflow}{for}(ligne = 0 ; ligne < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} ; ++ligne)\{
+32         printf(\textcolor{stringliteral}{"-"});
+33         \textcolor{keywordflow}{for}(i = 0 ; i < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}}; i++)  
+34             printf(\textcolor{stringliteral}{"----"});
+35         printf(\textcolor{stringliteral}{"     "});
+36         printf(\textcolor{stringliteral}{"-"});
+37         \textcolor{keywordflow}{for}(i = 0 ; i < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}}; i++)  
+38             printf(\textcolor{stringliteral}{"----"});
+39         printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+40         \textcolor{comment}{// Afficher la grille de l'adversaire (joueur1) en cachent les bateaux non toucher }
+41         \textcolor{keywordflow}{for}(colonne = 0 ; colonne < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} ; ++colonne)
+42                 \textcolor{keywordflow}{if}(joueur1->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne] == \textcolor{charliteral}{'\#'} \&\& cacher == 1)
+43                     printf(\textcolor{stringliteral}{"|   "});
+44                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joueur1->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne] == \textcolor{charliteral}{'X'})\{
+45                     printf(\textcolor{stringliteral}{"| "});
+46                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}} = \mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}};
+47                     \mbox{\hyperlink{affichage_8c_adba405b6c8341bbae8459669db1aa775}{compar}}(ligne, colonne, joueur1, 1, \&\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}});
+48                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}});
+49                     printf(\textcolor{stringliteral}{"\%c "},joueur1->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne]);
+50                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});
+51                 \}\textcolor{keywordflow}{else}\{
+52                     printf(\textcolor{stringliteral}{"| "});
+53                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(joueur1->\mbox{\hyperlink{structjoueur_a1064ba94d4d2719446f3c609135ba362}{color}});
+54                     printf(\textcolor{stringliteral}{"\%c "},joueur1->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne]);
+55                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});
+56                 \}
+57         
+58         \textcolor{keywordflow}{if}(ligne + 1 < 10)
+59             printf(\textcolor{stringliteral}{"|  \%d  "}, ligne + 1);
+60         \textcolor{keywordflow}{else}
+61             printf(\textcolor{stringliteral}{"|  \%d "}, ligne + 1);
+62         \textcolor{comment}{// Afficher la grille du joueur acctuelle (joueur2)  }
+63         \textcolor{keywordflow}{for}(colonne = 0 ; colonne < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} ; ++colonne)
+64                 \textcolor{keywordflow}{if}(joueur2->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne] == \textcolor{charliteral}{'O'})
+65                     printf(\textcolor{stringliteral}{"|   "});
+66                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(joueur2->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne] == \textcolor{charliteral}{'X'})\{
+67                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}} = \mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}};
+68                     \mbox{\hyperlink{affichage_8c_adba405b6c8341bbae8459669db1aa775}{compar}}(ligne, colonne, joueur2, 1, \&\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}});
+69                     printf(\textcolor{stringliteral}{"| "});
+70                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}});
+71                     printf(\textcolor{stringliteral}{"\%c "},joueur2->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne]);
+72                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});
+73                 \}\textcolor{keywordflow}{else}\{
+74                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}} = joueur2->\mbox{\hyperlink{structjoueur_a1064ba94d4d2719446f3c609135ba362}{color}};
+75                     \mbox{\hyperlink{affichage_8c_adba405b6c8341bbae8459669db1aa775}{compar}}(ligne, colonne, joueur2, 0, \&\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}});
+76                     printf(\textcolor{stringliteral}{"| "});
+77                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}});
+78                     printf(\textcolor{stringliteral}{"\%c "},joueur2->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[ligne][colonne]);
+79                     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});
+80                 \}
+81         printf(\textcolor{stringliteral}{"|\(\backslash\)n"});
+82     \}
+83  
+84     printf(\textcolor{stringliteral}{"-"});
+85     \textcolor{keywordflow}{for}(i = 0 ; i < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}}; i++)  
+86         printf(\textcolor{stringliteral}{"----"});
+87     printf(\textcolor{stringliteral}{"     "});
+88     printf(\textcolor{stringliteral}{"-"});
+89     \textcolor{keywordflow}{for}(i = 0 ; i < \mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}}; i++)  
+90         printf(\textcolor{stringliteral}{"----"});
+91     printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+92 \}
+\end{DoxyCode}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{affichage_8c_a8004c5a076f6d53e90583b921ac810cb_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c_a8004c5a076f6d53e90583b921ac810cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{affichage_8c_adba405b6c8341bbae8459669db1aa775}\label{affichage_8c_adba405b6c8341bbae8459669db1aa775}} 
+\index{affichage.\+c@{affichage.\+c}!compar@{compar}}
+\index{compar@{compar}!affichage.\+c@{affichage.\+c}}
+\subsubsection{\texorpdfstring{compar()}{compar()}}
+{\footnotesize\ttfamily void compar (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne,  }\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player,  }\item[{int}]{choix,  }\item[{char $\ast$$\ast$}]{couleur }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui récupere une couleur selon des conditions. 
+
+Cette fonction permet de récuperer soit la couleur real du bateau c\textquotesingle{}est choix==0, soit une autre couleur c\textquotesingle{}est tous le bateau est toucher 
+\begin{DoxyParams}{Paramètres}
+{\em int} & ligne \+: la ligne d\textquotesingle{}une case à tester. \\
+\hline
+{\em int} & colonne\+: la colonne d\textquotesingle{}une case à tester. \\
+\hline
+{\em joueur$\ast$} & player \+: le joueur actuelle. \\
+\hline
+{\em int} & choix \+: une variable qui nos sert à faire deux teste différent dans une fonction. \\
+\hline
+{\em char$\ast$$\ast$} & couleur \+: une pointeur sur la variable couleur. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 152 du fichier affichage.\+c.
+
+
+
+Références joueur\+::bat, bateau\+::color, couleur, bateau\+::nbr\+\_\+case\+\_\+colonne, bateau\+::nbr\+\_\+case\+\_\+ligne, bateau\+::nbr\+\_\+case\+\_\+total, bateau\+::nbr\+\_\+case\+\_\+toucher, N\+O\+M\+B\+R\+E\+\_\+\+B\+A\+T\+E\+AU, bateau\+::position\+\_\+colonne, et bateau\+::position\+\_\+ligne.
+
+
+
+Référencé par afficher().
+
+
+\begin{DoxyCode}
+152                                                                               \{
+153     \textcolor{keywordtype}{int} test, i;
+154     \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{header_8h_a56aaacd8cb8ffd138094887b2d3344f6}{NOMBRE\_BATEAU}}; ++i)\{
+155         test = ((colonne >= player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_aac775edde7cde57176e580c29f6e8eca}{position\_colonne}}) \&\& (colonne < player->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].position\_colonne + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}})) 
+156                 \&\&((ligne >= player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}{position\_ligne}}) \&\& (ligne < player->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}{position\_ligne}} + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}}));
+157 
+158         \textcolor{keywordflow}{if}(test \&\& (player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_aff445dc58a52069759f1e4bfd13c0313}{nbr\_case\_total}} == player->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a62ae80832c521a9984c520fde88dadfd}{nbr\_case\_toucher}}) \&\& (choix == 1))\{       
+159             *\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}} = \textcolor{stringliteral}{"40"};
+160             \textcolor{keywordflow}{break};
+161         \}
+162         \textcolor{keywordflow}{if}(test \&\& (choix == 0))\{
+163             *\mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}} = player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}};
+164             \textcolor{keywordflow}{break};
+165         \}
+166     \}
+167 \}
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c_adba405b6c8341bbae8459669db1aa775_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}\label{affichage_8c_a34b6e28e00a180632a300b9608ad6acd}} 
+\index{affichage.\+c@{affichage.\+c}!print@{print}}
+\index{print@{print}!affichage.\+c@{affichage.\+c}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui affiche différent messager de mise en forme dasn le jeu a l\textquotesingle{}aide d\textquotesingle{}un int donner comme argument. 
+
+Cette fonction permet d\textquotesingle{}afficher plusieur message d\textquotesingle{}indication selon la valeur de \char`\"{}int c\char`\"{}. 
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & player \+: le joueur. \\
+\hline
+{\em int} & cacher \+: une variable qui prend les valeurs 0, 1 , 2 et 3 . \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 99 du fichier affichage.\+c.
+
+
+
+Références joueur\+::color, couleur, joueur\+::nom, R\+ED, et W\+H\+I\+TE.
+
+
+
+Référencé par game\+Over(), jeu(), et jeu\+A\+N\+Coup().
+
+
+\begin{DoxyCode}
+99                                  \{
+100     fflush(stdin);
+101     \textcolor{keywordflow}{if}(c == 0)\{
+102         \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}}); printf(\textcolor{stringliteral}{"\%s, appyer sur entreé pour continuer!!\(\backslash\)n"}, player->
+      \mbox{\hyperlink{structjoueur_a5228c842828b2639253cb7db01e6f72d}{nom}});
+103         \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});
+104         getchar();
+105        CLEAR\_SCREEN;
+106     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(c == 1)\{
+107         \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\textcolor{stringliteral}{"47"}); \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});printf(\textcolor{stringliteral}{"\%s"},player->\mbox{\hyperlink{structjoueur_a5228c842828b2639253cb7db01e6f72d}{nom}});
+108         printf(\textcolor{stringliteral}{", c'est ton tour de joue:\(\backslash\)n---------------------------\(\backslash\)n"});
+109         \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});     
+110     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(c == 2)\{
+111         printf(\textcolor{stringliteral}{"Le joueur "});
+112         \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(player->\mbox{\hyperlink{structjoueur_a1064ba94d4d2719446f3c609135ba362}{color}});printf(\textcolor{stringliteral}{"\%s "},player->\mbox{\hyperlink{structjoueur_a5228c842828b2639253cb7db01e6f72d}{nom}});
+113         \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});printf(\textcolor{stringliteral}{"à Gagner ^-^.\(\backslash\)n"});       
+114         printf(\textcolor{stringliteral}{"La partie est terminer.\(\backslash\)nAppyer sur entreé pour revenir au menu principal!!"});
+115         getchar();
+116         CLEAR\_SCREEN;
+117     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(c == 3)\{
+118         printf(\textcolor{stringliteral}{"La partie Va Commencer.\(\backslash\)nAppyer sur entreé pour continuer!!"});
+119         getchar();
+120         CLEAR\_SCREEN;
+121     \}
+122 \}
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c_a34b6e28e00a180632a300b9608ad6acd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{affichage_8c_a671ab408369ac69a9b4d3afc29c6fd21}\label{affichage_8c_a671ab408369ac69a9b4d3afc29c6fd21}} 
+\index{affichage.\+c@{affichage.\+c}!table\+Board@{table\+Board}}
+\index{table\+Board@{table\+Board}!affichage.\+c@{affichage.\+c}}
+\subsubsection{\texorpdfstring{table\+Board()}{tableBoard()}}
+{\footnotesize\ttfamily void table\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui affiche le resultat du joueur actuelle à chaque tour. 
+
+Cette fonction permet d\textquotesingle{}afficher les resultats de chaque joueur a chaque tour de jeu. ~\newline
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & player \+: le joueur. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 128 du fichier affichage.\+c.
+
+
+
+Références joueur\+::bat, couleur, joueur\+::nbr\+\_\+bateau\+\_\+couler, joueur\+::nbr\+\_\+bateau\+\_\+restant, bateau\+::nbr\+\_\+case\+\_\+total, bateau\+::nbr\+\_\+case\+\_\+toucher, joueur\+::nbr\+\_\+tir\+\_\+manquer, joueur\+::nbr\+\_\+tir\+\_\+reussit, N\+O\+M\+B\+R\+E\+\_\+\+B\+A\+T\+E\+AU, et W\+H\+I\+TE.
+
+
+
+Référencé par afficher().
+
+
+\begin{DoxyCode}
+128                                \{
+129     \textcolor{keywordtype}{int} i;
+130     player->\mbox{\hyperlink{structjoueur_ab0c0fa544d83148d4daed41c84954e55}{nbr\_bateau\_couler}} = 0;
+131     \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{header_8h_a56aaacd8cb8ffd138094887b2d3344f6}{NOMBRE\_BATEAU}}; ++i)\{
+132         \textcolor{keywordflow}{if}(player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a62ae80832c521a9984c520fde88dadfd}{nbr\_case\_toucher}} == player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].
+      \mbox{\hyperlink{structbateau_aff445dc58a52069759f1e4bfd13c0313}{nbr\_case\_total}})\{
+133             player->\mbox{\hyperlink{structjoueur_ab0c0fa544d83148d4daed41c84954e55}{nbr\_bateau\_couler}}++;
+134             player->\mbox{\hyperlink{structjoueur_a4f902c486f8d66cb85cf3b07abd0bd12}{nbr\_bateau\_restant}} = \mbox{\hyperlink{header_8h_a56aaacd8cb8ffd138094887b2d3344f6}{NOMBRE\_BATEAU}} - player->
+      \mbox{\hyperlink{structjoueur_ab0c0fa544d83148d4daed41c84954e55}{nbr\_bateau\_couler}};
+135         \}
+136     \}
+137     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\textcolor{stringliteral}{"45"});
+138     printf(\textcolor{stringliteral}{"Nombre de bateau restant : \%d   Nombre de bateau couler : \%d\(\backslash\)n"},player->
+      \mbox{\hyperlink{structjoueur_a4f902c486f8d66cb85cf3b07abd0bd12}{nbr\_bateau\_restant}},player->\mbox{\hyperlink{structjoueur_ab0c0fa544d83148d4daed41c84954e55}{nbr\_bateau\_couler}});
+139     printf(\textcolor{stringliteral}{"Nombre de tire reussi    : \%d   Nombre de tire manquer  : \%d\(\backslash\)n"},player->
+      \mbox{\hyperlink{structjoueur_a19510a02b4ff3f6336da487b50806d71}{nbr\_tir\_reussit}},player->\mbox{\hyperlink{structjoueur_aaba095a23d03a15d363924e77caa3c1e}{nbr\_tir\_manquer}});
+140     \mbox{\hyperlink{header_8h_aabcb2d6536b6c0ab41f99493c911489b}{couleur}}(\mbox{\hyperlink{header_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}});
+141 \}
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c_a671ab408369ac69a9b4d3afc29c6fd21_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,194 @@
+\hypertarget{positionnement_8c}{}\section{Référence du fichier positionnement.\+c}
+\label{positionnement_8c}\index{positionnement.\+c@{positionnement.\+c}}
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de positionnement.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{positionnement_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structjoueur}{joueur}} $\ast$ \mbox{\hyperlink{positionnement_8c_ad0373883ed5579d1c3a0dd93f257e558}{positionement\+Des\+Bateaux}} (\mbox{\hyperlink{structjoueur}{joueur}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Une fonction qui posision les bateau de la bonne façon à chaque debut de jeu apres l\textquotesingle{}initialisation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\begin{DoxyAuthor}{Auteur}
+B.\+Habib, A.\+Sofiane, I.\+Tinhinane, I.\+Chafia 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07 Avril 2018
+\end{DoxyDate}
+définition de la fonction positionnement 
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{positionnement_8c_ad0373883ed5579d1c3a0dd93f257e558}\label{positionnement_8c_ad0373883ed5579d1c3a0dd93f257e558}} 
+\index{positionnement.\+c@{positionnement.\+c}!positionement\+Des\+Bateaux@{positionement\+Des\+Bateaux}}
+\index{positionement\+Des\+Bateaux@{positionement\+Des\+Bateaux}!positionnement.\+c@{positionnement.\+c}}
+\subsubsection{\texorpdfstring{positionement\+Des\+Bateaux()}{positionementDesBateaux()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structjoueur}{joueur}}$\ast$ positionement\+Des\+Bateaux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structjoueur}{joueur}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Une fonction qui posision les bateau de la bonne façon à chaque debut de jeu apres l\textquotesingle{}initialisation. 
+
+Cette fonction permet de positionner les bateaux. 
+\begin{DoxyParams}{Paramètres}
+{\em joueur$\ast$} & player \+: le joueur concerner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le joueur. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 8 du fichier positionnement.\+c.
+
+
+
+Références joueur\+::bat, bateau\+::color, bateau\+::nbr\+\_\+case\+\_\+colonne, bateau\+::nbr\+\_\+case\+\_\+ligne, bateau\+::nbr\+\_\+case\+\_\+total, bateau\+::nbr\+\_\+case\+\_\+toucher, N\+O\+M\+B\+R\+E\+\_\+\+B\+A\+T\+E\+AU, bateau\+::normale, joueur\+::plateau, bateau\+::position\+\_\+colonne, bateau\+::position\+\_\+ligne, T\+A\+I\+L\+L\+E\+\_\+\+P\+L\+A\+T\+E\+AU, et bateau\+::type.
+
+
+
+Référencé par initialisation().
+
+
+\begin{DoxyCode}
+8                                                \{
+9     \textcolor{keywordtype}{int} nbrCase = 2, occuper, choix1, choix2;
+10     \textcolor{keywordtype}{int} posc, posl;
+11     \textcolor{comment}{// Les 4 Bateaux sous forme de  ligne}
+12     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 4;i++)\{
+13         player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} = nbrCase++;
+14         player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} = 1;
+15     \}
+16     \textcolor{comment}{// Les Couleur donner pour chaque bateaux}
+17     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[0].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"32"};player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[1].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"33"};player->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[2].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"34"};player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[3].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"35"};
+18     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[4].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"36"};player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[5].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"37"};player->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[6].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"38"};player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[7].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"36"};
+19     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[8].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"32"};player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[9].\mbox{\hyperlink{structbateau_a41910d4781ab6f3256d23f62b98c49a1}{color}} = \textcolor{stringliteral}{"33"};
+20     \textcolor{comment}{// Les bateaux sous forme de 4x4 et 4x2}
+21     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[4].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} = player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[4].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} = 2;
+22     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[5].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} = 4;player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[5].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} = 2;
+23     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[6].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} = player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[6].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} = 4;
+24     \textcolor{comment}{// on fait la déffirence  entre les bateaux normale(bateaux ligne, 4x4 et 4x2) est anormale(bateaux L,
+       H et T)  }
+25     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i <= 6; ++i)\{   
+26         player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}{type}} = 0;\textcolor{comment}{// pour faire la deffirence entre les forme des bateaux}
+27         player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}{normale}} = 0;
+28         player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_aff445dc58a52069759f1e4bfd13c0313}{nbr\_case\_total}} = player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} * player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}};\textcolor{comment}{// Nombre total de case
+       pour chaque  bateau}
+29     \}
+30     \textcolor{comment}{// Les bateau sous forme de L, H et T}
+31     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[7].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} = player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[7].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} = 4; player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[7].\mbox{\hyperlink{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}{normale}} = 1; player->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[7].\mbox{\hyperlink{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}{type}} = 1; player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[7].\mbox{\hyperlink{structbateau_aff445dc58a52069759f1e4bfd13c0313}{nbr\_case\_total}} = 7;
+32     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[8].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} = 3; player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[8].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} = 4; player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[8].\mbox{\hyperlink{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}{normale}} = 1; player->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[8].\mbox{\hyperlink{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}{type}} = 2; player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[8].\mbox{\hyperlink{structbateau_aff445dc58a52069759f1e4bfd13c0313}{nbr\_case\_total}} = 6;
+33     player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[9].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} = player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[9].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} = 3; player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[9].\mbox{\hyperlink{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}{normale}} = 1; player->
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[9].\mbox{\hyperlink{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}{type}} = 3; player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[9].\mbox{\hyperlink{structbateau_aff445dc58a52069759f1e4bfd13c0313}{nbr\_case\_total}} = 7;
+34     \textcolor{comment}{// Placement des Bateaux dans le plateau}
+35     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0 ; i < \mbox{\hyperlink{header_8h_a56aaacd8cb8ffd138094887b2d3344f6}{NOMBRE\_BATEAU}} ; i++)\{
+36         player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a62ae80832c521a9984c520fde88dadfd}{nbr\_case\_toucher}} = 0;\textcolor{comment}{// Au debut aucune case n'est toucher }
+37         \textcolor{comment}{//chercher une bonne position pour chaque bateau}
+38         \textcolor{keywordflow}{do}\{
+39             occuper = 0;
+40             posc = rand() \% (\mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} - player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].
+      \mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} + 1);\textcolor{comment}{// Colonne de positionement du bateau}
+41             posl = rand() \% (\mbox{\hyperlink{header_8h_adc3c2556e84bebbe78c8a87fc459a6f8}{TAILLE\_PLATEAU}} - player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} + 1); \textcolor{comment}{// Ligne de positionement du bateau}
+42             \textcolor{comment}{//printf("posl = \%d   posc = \%d \(\backslash\)n",posl,posc);}
+43             \textcolor{comment}{// Vérifié si il y n'a pas un autre bateau sur cette position}
+44             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = posl ; j < posl + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} ; j++)\{
+45                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = posc ; k < posc + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} ; ++k)\{
+46                     \textcolor{keywordflow}{if}(player->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[j][k] == \textcolor{charliteral}{'\#'})\{
+47                         occuper = 1;
+48                         \textcolor{keywordflow}{break};
+49                     \}
+50                 \}   
+51                 \textcolor{keywordflow}{if}(occuper == 1)\textcolor{keywordflow}{break};
+52             \}
+53             \textcolor{keywordflow}{if}(player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}{normale}})\{
+54                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < i; ++j)\{
+55                     \textcolor{keywordflow}{if}(((posc >= player-> \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_aac775edde7cde57176e580c29f6e8eca}{position\_colonne}})
+56                             \&\& (posc < player-> \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[j].\mbox{\hyperlink{structbateau_aac775edde7cde57176e580c29f6e8eca}{position\_colonne}} + player-> 
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[j].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}})) \&\&
+57                             ((posl >= player-> \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[j].\mbox{\hyperlink{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}{position\_ligne}})
+58                             \&\& (posl < player-> \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[j].position\_ligne + player-> 
+      \mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[j].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}})))\{
+59                         occuper = 1;
+60                         \textcolor{keywordflow}{break};
+61                     \}
+62                 \}
+63             \}
+64         \} \textcolor{keywordflow}{while} (occuper == 1);\textcolor{comment}{// repeter tanque il y déja un bateau sur cette position }
+65         \textcolor{comment}{//Affecter la bonne position au bateau }
+66         player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5dcd33e534b9b1b8b0414325bc5c09b1}{position\_ligne}} = posl; 
+67         player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_aac775edde7cde57176e580c29f6e8eca}{position\_colonne}} = posc;
+68         \textcolor{comment}{// Dessiner le bateau selon sa forme (ligne, 4x4, 4x2, L, H et T ...)}
+69         \textcolor{keywordflow}{if}(player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a77fe0bf7801ff08bf9b17e6c6237692e}{normale}} == 0)\{
+70             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = posl ; j < posl + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} ; j++)
+71                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = posc ; k < posc + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} ; ++k)
+72                     player->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[j][k] = \textcolor{charliteral}{'\#'};
+73         \}\textcolor{keywordflow}{else}\{
+74             \textcolor{keywordflow}{switch} (player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}{type}})\{
+75                 \textcolor{keywordflow}{case} 1 :\{\textcolor{comment}{// Bateau sous forme de L 4 cas}
+76                     choix1 = rand()\%3 + 1;
+77                     choix2 = rand()\%3 + 1;
+78                     \textcolor{keywordflow}{if}(choix2 == 2 ) choix2 = posl + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].
+      \mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} - 1 ;
+79                     \textcolor{keywordflow}{else} choix2 = posl ;
+80 
+81                     \textcolor{keywordflow}{if}(choix1 == 2 ) choix1 = posc + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].
+      \mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} - 1 ;
+82                     \textcolor{keywordflow}{else} choix1 = posc ;
+83                 \}
+84                 \textcolor{keywordflow}{break};
+85                 \textcolor{keywordflow}{case} 2 :\{\textcolor{comment}{// Bateau sous forme de T}
+86                     choix1 = posc + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}}/2;
+87                     choix2 = posl;
+88                 \}
+89                 \textcolor{keywordflow}{break};
+90                 \textcolor{keywordflow}{case} 3 :\{\textcolor{comment}{// Bateau sous forme de H}
+91                     choix1 = posc + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} - 1;
+92                     choix2 = posl + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} / 2;
+93                 \}
+94                 \textcolor{keywordflow}{break};
+95             \}
+96             \textcolor{comment}{// Placer les bateaux dans le plateau }
+97             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = posl ; j < posl + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} ; j++)
+98                 player->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[j][choix1] = \textcolor{charliteral}{'\#'};
+99 
+100             \textcolor{keywordflow}{if}(player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_ac4078d21fa180ff7d5c7e7fbf8a4a773}{type}} == 3)\{
+101                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = posl ; j < posl + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a5f7637b2932717e5589e1a368dd1b47b}{nbr\_case\_ligne}} ; j++)
+102                 player->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[j][posc] = \textcolor{charliteral}{'\#'};
+103             \}
+104 
+105             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = posc ; k < posc + player->\mbox{\hyperlink{structjoueur_a3b21aa14ce27f69126dc9a649b363146}{bat}}[i].\mbox{\hyperlink{structbateau_a1a56dd379e7c5cfc5714fd204947a0a8}{nbr\_case\_colonne}} ; ++k) 
+106                 player->\mbox{\hyperlink{structjoueur_a0de66c3578a57ff8e0ed1bf3d91c8e82}{plateau}}[choix2][k] = \textcolor{charliteral}{'\#'};
+107         \}
+108     \}
+109 
+110 \textcolor{keywordflow}{return} player;
+111 \}
+\end{DoxyCode}
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{positionnement_8c_ad0373883ed5579d1c3a0dd93f257e558_icgraph}
+\end{center}
+\end{figure}
